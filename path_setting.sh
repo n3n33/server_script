@@ -15,3 +15,5 @@ EOF
 createPath
 
 chmod +x /etc/profile.d/${files_name}
+
+source /etc/profile.d/${files_name}
