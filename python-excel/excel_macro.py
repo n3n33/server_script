@@ -1,7 +1,9 @@
-from openpyxl import Workbook, workbook
-
+import openpyxl
 import logging
 import sys
+
+from openpyxl import Workbook, workbook
+
 
 def create_workbook():
   # workbook 생성
@@ -16,5 +18,13 @@ def create_workbook():
   logging.info('Excel stored')
   wb.close()
 
-
+def create_cells():
+    logging.info('Workbook Load')
+    wb = openpyxl.load_workbook('C:/Users/User/Desktop/excel_create_macro.xlsx')
+    ws = wb['testsheet']
+    logging.info('cell data input')
+    ws['A1'] = 'testing'
+    wb.save('C:/Users/User/Desktop/excel_create_macro.xlsx')
 # create_workbook()
+
+create_cells()
