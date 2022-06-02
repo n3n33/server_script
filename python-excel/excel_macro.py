@@ -4,7 +4,6 @@ import sys
 
 from openpyxl import Workbook, workbook
 
-
 def create_workbook():
   # workbook 생성
   wb = Workbook()
@@ -25,6 +24,13 @@ def create_cells():
     logging.info('cell data input')
     ws['A1'] = 'testing'
     wb.save('C:/Users/User/Desktop/excel_create_macro.xlsx')
-# create_workbook()
 
-create_cells()
+
+
+
+
+
+
+
+# create_workbook()
+# create_cells()
