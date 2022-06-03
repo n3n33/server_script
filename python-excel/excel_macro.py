@@ -26,11 +26,19 @@ def create_cells():
     wb.save('C:/Users/User/Desktop/excel_create_macro.xlsx')
 
 
-
-
-
-
+def input_data():
+    logging.info('Workbook Load')
+    wb = openpyxl.load_workbook('C:/Users/User/Desktop/excel_create_macro.xlsx')
+    ws = wb['testsheet']
+    logging.info('cell data input')
+    i = 1
+    for x in range(1, 20):
+        for y in range(1,20):
+            ws.cell(x, y).value = i
+            i+=1
+    wb.save('C:/Users/User/Desktop/excel_create_macro.xlsx')
 
 
 # create_workbook()
 # create_cells()
+input_data()
